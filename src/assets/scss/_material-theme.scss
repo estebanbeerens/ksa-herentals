@@ -1,0 +1,72 @@
+$mat-ksa-primary: (
+    50 : #e0ecf4,
+    100 : #b3cee4,
+    200 : #80aed3,
+    300 : #4d8ec1,
+    400 : #2675b3,
+    500 : #005da6,
+    600 : #00559e,
+    700 : #004b95,
+    800 : #00418b,
+    900 : #00307b,
+    A100 : #a8c3ff,
+    A200 : #759fff,
+    A400 : #427cff,
+    A700 : #296aff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$mat-ksa-accent: (
+    50 : #ffede7,
+    100 : #ffd1c2,
+    200 : #ffb399,
+    300 : #ff9470,
+    400 : #ff7d52,
+    500 : #ff6633,
+    600 : #ff5e2e,
+    700 : #ff5327,
+    800 : #ff4920,
+    900 : #ff3814,
+    A100 : #ffffff,
+    A200 : #fffbfb,
+    A400 : #ffcec8,
+    A700 : #ffb8ae,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$primary: mat-palette($mat-ksa-primary);
+$accent: mat-palette($mat-ksa-accent);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);

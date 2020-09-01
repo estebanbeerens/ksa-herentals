@@ -1,0 +1,23 @@
+<mat-toolbar id="ksa-navbar" color="primary">
+
+    <button mat-icon-button class="mr-2">
+      <mat-icon>menu</mat-icon>
+    </button>
+    
+    <img class="ksa-nav-logo" (click)="goToHome()" 
+         src="assets/img/logo_KSA_Herentals_wit.png" alt="KSA Herentals" >
+    <span class="ksa-nav-spacer"></span>
+
+    <div *ngFor="let navLink of navLinks" class="ksa-nav-spacer">
+      <button mat-flat-button color="primary" class="ksa-nav-link {{navLink.class}}"
+              [routerLink]="[navLink.path]" routerLinkActive="ksa-nav-active">
+        <mat-icon>{{navLink.icon}}</mat-icon>
+        <span>{{navLink.title}}</span>
+      </button>
+    </div>
+
+    <button class="ml-2" mat-icon-button (click)="goToLink('https://www.facebook.com/ksaherentals/')">
+      <mat-icon>facebook</mat-icon>
+    </button>
+
+</mat-toolbar>

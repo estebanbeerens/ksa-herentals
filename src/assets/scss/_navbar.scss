@@ -1,0 +1,44 @@
+@import './variables';
+
+#ksa-navbar {
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    letter-spacing: 0.05rem;
+}
+
+.ksa-nav-spacer {
+    flex: 1 1 auto;
+}
+
+.ksa-nav-link {
+    color: #ddd !important;
+    letter-spacing: 0.08rem;
+
+    mat-icon {
+        margin: 0 6px 0 0;
+    }
+
+    &:hover {
+      color: #eee !important;
+    }
+
+    &.ksa-nav-active {
+      color: #fff !important;
+      background-color: $secondary;
+    }
+}
+
+.ksa-nav-logo {
+    height: $navbar-height;
+}
+
+//Nav link underline
+@media screen and (min-width: 991.5px) {
+  @media screen and (min-width: 1199.5px) {
+    @include navlinkAnimation(1.5rem);
+  }
+  @media screen and (max-width: 1199.5px) {
+    @include navlinkAnimation(1rem);
+  }
+}
+
