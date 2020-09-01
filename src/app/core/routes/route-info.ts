@@ -7,13 +7,13 @@ export interface RouteInfo {
 
 export const ROUTES: RouteInfo[] = [
     { 
-        path: '/',
+        path: '/home',
         title: 'Home',
         icon: 'home',
         class: '',
     },
     { 
-        path: '/calendar',
+        path: '/kalender',
         title: 'Kalender',
         icon: 'today',
         class: '',

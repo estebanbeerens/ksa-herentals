@@ -4,21 +4,21 @@ import { PreloadModulesStrategy } from './core/strategies/preload-modules.strate
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     loadChildren: () =>
       import('./pages/home/home.module').then(
         (m) => m.HomeModule
       ),
   },
   {
-    path: 'calendar',
+    path: 'kalender',
     loadChildren: () =>
       import('./pages/calendar/calendar.module').then(
         (m) => m.CalendarModule
       ),
   },
-  { path: '', pathMatch: 'full', redirectTo: '' },
-  { path: '**', pathMatch: 'full', redirectTo: '' }
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 @NgModule({

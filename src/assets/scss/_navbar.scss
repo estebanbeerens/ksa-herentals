@@ -2,7 +2,7 @@
 
 #ksa-navbar {
     font-family: 'Roboto', sans-serif;
-    position: fixed;
+    // position: fixed;
     letter-spacing: 0.05rem;
 }
 
@@ -24,12 +24,16 @@
 
     &.ksa-nav-active {
       color: #fff !important;
-      background-color: $secondary;
+      background-color: transparentize($color:  #fff, $amount: 0.9);
     }
 }
 
 .ksa-nav-logo {
     height: $navbar-height;
+
+    &:hover {
+      cursor: pointer;
+    }
 }
 
 //Nav link underline
