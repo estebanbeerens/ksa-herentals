@@ -2,6 +2,7 @@ export interface RouteInfo {
     path: string;
     title: string;
     icon?: string;
+    subRoutes?: RouteInfo[];
     class: string;
 }
 
@@ -13,15 +14,21 @@ export const ROUTES: RouteInfo[] = [
         class: '',
     },
     { 
+        path: '/informatie',
+        title: 'Informatie',
+        icon: 'info',
+        class: '',
+    },
+    { 
         path: '/kalender',
         title: 'Kalender',
         icon: 'today',
         class: '',
     },
-    // { 
-    //     path: '/TODO',
-    //     title: 'Documenten',
-    //     icon: 'attach_file',
-    //     class: '',
-    // },
+    { 
+        path: '/contact',
+        title: 'Contact',
+        icon: 'mail',
+        class: '',
+    },
 ];

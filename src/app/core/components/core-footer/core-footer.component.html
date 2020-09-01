@@ -1,7 +1,45 @@
 <footer class="footer">
-    <div class="container-fluid">
-        <div class="copyright pull-right">
-            &copy; {{copyrightDate | date: 'yyyy'}}, made by <a href="https://estebanbeerens.com" target="_blank">Esteban Beerens</a>
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-5">
+                <h3>Over KSA Herentals</h3>
+                <p>Wij zijn de jeugdbewing met blauwe hemden en oranje sjaaltjes die elke week Herentals onveilig maakt. 
+                Al meer dan 80 jaar hebben we onze thuisbasis in hartje Herentals, maar we komen ook ver daarbuiten. 
+                Iedereen van 6 tot 16 jaar is welkom bij ons!
+                </p>
+                <p class="social">
+                    <a href="https://www.facebook.com/ksaherentals/" class="mr-2">
+                        <span class="icofont-facebook"></span>
+                    </a>
+                    <a href="https://www.instagram.com/ksaherentals/">
+                        <span class="icofont-instagram"></span>
+                    </a>
+                </p>
+            </div>
+            <div class="col-md-5">
+                <h3>Locatie</h3>
+                <p>Kapucijnenstraat 7, 2200 Herentals</p>
+            </div>
+            <div class="col-md-1">
+                <h3>Navigatie</h3>
+                <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Informatie</a></li>
+                <li><a href="#">Kalender</a></li>
+                <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
         </div>
+
+        <div class="row justify-content-center text-center">
+        <div class="col-md-7">
+            <p class="copyright">
+                <span>&copy; Copyright {{copyrightDate | date: 'yyyy'}}</span>
+                <span class="ml-1 mr-1">&bull;</span>
+            <a href="https://estebanbeerens.com" target="_blank">Esteban Beerens</a>
+            </p>
+        </div>
+        </div>
+
     </div>
 </footer>

@@ -1,49 +1,53 @@
-.footer{
-    padding: 24px 10px;
+@import './variables';
+@import './mixins';
 
-    &.footer-default{
-        background-color: #f2f2f2;
-    }
+.footer {
+    padding: 2.5rem 0 2.5rem 0;
+    
+    background-color: $primary;
+    color: white;
 
-    nav{
-        float: left;
-        padding-left: 0;
-    }
+	h3 {
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+	ul {
+		li {
+			margin-bottom: 10px;
+		}
+  }
+  a {
+		color: lighten($secondary, 10%);
+  }
+  .copyright {
+    margin-bottom: 0px;
+  }
+  .copyright, .credits {
+    font-size: 14px;
+  }
+}
 
-    .pull-right {
-      float: right; 
-    }
-
-    ul{
-        margin-bottom: 0;
-        padding: 0;
-        list-style: none;
-
-        li{
-            display: inline-block;
-
-            a{
-                color: inherit;
-                padding: .5rem;
-                font-size: 0.8571em;
-                text-transform: uppercase;
-                text-decoration: none;
-
-                &:hover{
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-
-    .copyright{
-        font-size: 0.8571em;
-        line-height: 1.8;
-    }
-
-    &:after{
-        display: table;
-        clear: both;
-        content: " ";
-    }
+.social {
+	a {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: white;
+		position: relative;
+		text-align: center;
+		transition: .3s background ease;
+		color: #0d1e2d;
+		span {
+			display: inline-block;
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		&:hover {
+			color: white;
+			background: transparentize($color: white, $amount: 0.9);;
+		}
+	}
 }

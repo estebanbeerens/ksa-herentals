@@ -11,10 +11,24 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'informatie',
+    loadChildren: () =>
+      import('./pages/information/information.module').then(
+        (m) => m.InformationModule
+      ),
+  },
+  {
     path: 'kalender',
     loadChildren: () =>
       import('./pages/calendar/calendar.module').then(
         (m) => m.CalendarModule
+      ),
+  },
+  {
+    path: 'contact',
+    loadChildren: () =>
+      import('./pages/contact/contact.module').then(
+        (m) => m.ContactModule
       ),
   },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
