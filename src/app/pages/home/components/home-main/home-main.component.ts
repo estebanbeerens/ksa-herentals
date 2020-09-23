@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FacebookService, InitParams } from 'ngx-facebook';
 
 @Component({
   selector: 'gg-home-main',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeMainComponent implements OnInit {
 
-  constructor() { }
+  constructor(private facebookService: FacebookService) { }
 
   ngOnInit(): void {
+    const initParams: InitParams = { xfbml:true, version:'v3.2', appId: '2554931211426275' };
+    this.facebookService.init(initParams);
+    this.facebookService.api('/1419277798290637/feed').then(
+      (response) => console.log(response)
+    );
   }
 
 }

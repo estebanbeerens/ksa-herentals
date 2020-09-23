@@ -10,9 +10,10 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FacebookModule } from 'ngx-facebook';
 import { RouterModule } from '@angular/router';
+import { CoreHeaderImageComponent } from './components/core-header-image/core-header-image.component';
 
 @NgModule({
-  declarations: [CoreFooterComponent, CoreNavbarComponent, CoreMessengerComponent, CoreSidenavComponent],
+  declarations: [CoreFooterComponent, CoreNavbarComponent, CoreMessengerComponent, CoreSidenavComponent, CoreHeaderImageComponent ],
   imports: [
     CommonModule,
     RouterModule,
@@ -22,6 +23,6 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     FacebookModule.forRoot()
   ],
-  exports: [CoreFooterComponent, CoreNavbarComponent, CoreMessengerComponent, CoreSidenavComponent]
+  exports: [CoreFooterComponent, CoreNavbarComponent, CoreMessengerComponent, CoreSidenavComponent, CoreHeaderImageComponent ]
 })
 export class CoreModule { }

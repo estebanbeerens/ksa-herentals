@@ -1,11 +1,19 @@
 @import './variables';
-@import './mixins';
 
 .footer {
     padding: 2.5rem 0 2.5rem 0;
-    
     background-color: $primary;
-    color: white;
+	color: white;
+
+	&.rotated {
+		transform: rotate(2deg);
+		margin-left: -5%;
+		width: 110%;
+		height: 110%;
+		.container {
+			transform: rotate(-2deg);
+		}
+	}
 
 	h3 {
 		font-size: 18px;
@@ -15,16 +23,14 @@
 		li {
 			margin-bottom: 10px;
 		}
-  }
-  a {
-		color: lighten($secondary, 10%);
-  }
-  .copyright {
-    margin-bottom: 0px;
-  }
-  .copyright, .credits {
-    font-size: 14px;
-  }
+  	}
+	a {
+			color: lighten($secondary, 10%);
+	}
+	.copyright, .credits {
+		font-size: 14px;
+	}
+
 }
 
 .social {

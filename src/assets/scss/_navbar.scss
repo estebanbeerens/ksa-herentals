@@ -2,7 +2,7 @@
 
 #ksa-navbar {
     font-family: 'Roboto', sans-serif;
-    // position: fixed;
+    // position: fixed;                   // Worst line of code ever
     letter-spacing: 0.05rem;
 }
 
@@ -22,6 +22,25 @@
       color: #eee !important;
     }
 
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%) scaleX(0);
+      transform-origin: 50% 50%;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.8);
+      transition: transform 250ms;
+    }
+
+    &:hover {
+      &::after {
+        transform: translateX(-50%) scaleX(1);
+      }
+    }
+
     &.ksa-nav-active {
       color: #fff !important;
       background-color: transparentize($color:  #fff, $amount: 0.9);
@@ -35,14 +54,3 @@
       cursor: pointer;
     }
 }
-
-//Nav link underline
-@media screen and (min-width: 991.5px) {
-  @media screen and (min-width: 1199.5px) {
-    @include navlinkAnimation(1.5rem);
-  }
-  @media screen and (max-width: 1199.5px) {
-    @include navlinkAnimation(1rem);
-  }
-}
-
